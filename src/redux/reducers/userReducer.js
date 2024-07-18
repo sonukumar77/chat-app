@@ -5,7 +5,7 @@ const INITIAL_STATE = {
 export const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "ADD_USER":
-      return [...state.users, action.payload];
+    return { ...state, users: [...state.users, action.payload] };
 
     default:
       return state;
